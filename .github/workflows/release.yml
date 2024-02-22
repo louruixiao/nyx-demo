@@ -7,11 +7,13 @@ jobs:
   build-project:
     name: 构建项目
     runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
       - name: 检出代码
         uses: actions/checkout@v4
-      - name: 修改gradle源
-        run:
+      - name: 编译构建
+        run: echo '编译构建'
       - name: 发行版本
         run: ./gradlew nyxPublish --info --stacktrace
 
