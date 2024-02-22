@@ -16,7 +16,7 @@ jobs:
         run: |
           echo "GITHUB_TOKEN:${{ secrets.GITHUB_TOKEN }}"
       - name: 编译构建
-        run: echo "编译构建"
+        run: git config --global user.email "775674502@qq.com"
       - name: 发行版本
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
