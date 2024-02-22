@@ -7,13 +7,19 @@ jobs:
   build-project:
     name: 构建项目
     runs-on: ubuntu-latest
-    env:
-      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: 检出代码
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: 输出
+        run: | 
+          echo 'GITHUB_TOKEN:${{ secrets.GITHUB_TOKEN }}'
+          echo '${{GITHUB_ENV}'
       - name: 编译构建
         run: echo '编译构建'
       - name: 发行版本
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: ./gradlew nyxPublish --info --stacktrace
 
