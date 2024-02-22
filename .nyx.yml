@@ -3,7 +3,7 @@ preset: "extended"
 resume: true
 scheme: SEMVER
 dryRun: false
-initialVersion: "0.0.0"
+initialVersion: "0.1.0"
 releaseLenient: true
 releasePrefix: v
 summary: true
