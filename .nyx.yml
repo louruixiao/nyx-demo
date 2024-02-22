@@ -64,8 +64,6 @@ releaseTypes:
       gitTagNames:
         - "latest"
       matchBranches: ^(master|main)$
-      matchEnvironmentVariables:
-        CI: "^true$"
       matchWorkspaceStatus: "CLEAN"
       publish: "true"
       releaseName: "Release "
