@@ -18,4 +18,4 @@ jobs:
       - name: 发行版本
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: ./gradlew nyxPublish
+        run: ./gradlew nyxPublish --stacktrace
