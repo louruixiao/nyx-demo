@@ -1,0 +1,17 @@
+name: 发布
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build-project:
+    name: 构建项目
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+      - name: 修改gradle源
+        run:
+      - name: 发行版本
+        run: ./gradlew nyxPublish --info --stacktrace
+
