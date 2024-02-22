@@ -14,11 +14,8 @@ jobs:
           fetch-depth: 0
       - name: 输出
         run: |
-          echo "GITHUB_TOKEN:${{ secrets.GITHUB_TOKEN }}"
+          echo "GITHUB_TOKEN:${{ secrets.GH_TOKEN }}"
       - name: 发行版本
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git config --global user.email "775674502@qq.com"
-          git remote set-url origin "https://github.com/louruixiao/nyx-demo.git"
-          ./gradlew nyxPublish --info --stacktrace
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: ./gradlew nyxPublish --info --stacktrace
