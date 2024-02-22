@@ -18,4 +18,5 @@ jobs:
       - name: 发行版本
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          CI: true
         run: ./gradlew nyxPublish --info --stacktrace
