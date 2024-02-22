@@ -61,8 +61,6 @@ releaseTypes:
       gitTag: "true"
       gitTagForce: "true"
       gitTagMessage: "Tag version "
-      gitTagNames:
-        - "latest"
       matchBranches: ^(master|main)$
       matchWorkspaceStatus: "CLEAN"
       publish: "true"
