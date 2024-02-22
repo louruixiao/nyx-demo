@@ -31,13 +31,13 @@ git:
   remotes:
     origin:
       authenticationMethod: USER_PASSWORD
-      user: "{{#environmentVariable}}G_T{{/environmentVariable}}"
+      user: "{{#environmentVariable}}GH_TOKEN{{/environmentVariable}}"
       password: ""
 services:
   github:
     type: "GITHUB"
     options:
-      AUTHENTICATION_TOKEN: "{{#environmentVariable}}G_T{{/environmentVariable}}"
+      AUTHENTICATION_TOKEN: "{{#environmentVariable}}GH_TOKEN{{/environmentVariable}}"
       REPOSITORY_NAME: "learn-github"
       REPOSITORY_OWNER: "louruixiao"
 releaseTypes:
