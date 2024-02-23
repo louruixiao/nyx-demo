@@ -62,35 +62,37 @@ releaseTypes:
     mainline:
       collapseVersions: false
       filterTags: "^({{configuration.releasePrefix}})?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)$"
+      description: "{{#fileContent}}build/CHANGELOG.md{{/fileContent}}"
       gitCommit: "false"
       gitPush: "true"
       gitPushForce: "true"
       gitTag: "true"
       gitTagForce: "true"
-      gitTagMessage: "Tag version "
+      gitTagMessage: "Tag version {{version}}"
       matchBranches: ^(master|main)$
       matchWorkspaceStatus: "CLEAN"
       publish: "true"
-      releaseName: "Release "
+      releaseName: "{{version}}"
       versionRangeFromBranchName: false
     integration:
       collapseVersions: true
       collapsedVersionQualifier: "alpha"
-      description: "Integration release "
+      description: "{{#fileContent}}build/CHANGELOG.md{{/fileContent}}"
       filterTags: "^({{configuration.releasePrefix}})?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)(-(dev|develop|development|integration|latest)(\\.([0-9]\\d*))?)$"
       gitCommit: "false"
       gitPush: "true"
       gitTag: "true"
+      gitTagMessage: "Tag version333 {{version}}"
       matchBranches: "^(dev|develop|development|integration|latest)$"
       matchWorkspaceStatus: "CLEAN"
       publish: "true"
       publishPreRelease: "true"
-      releaseName: "Pre Release "
+      releaseName: "{{version}}"
       versionRangeFromBranchName: false
     feature:
       collapseVersions: true
-      collapsedVersionQualifier: ""
-      description: "Feature release "
+      collapsedVersionQualifier: "feature"
+      description: "{{#fileContent}}build/CHANGELOG.md{{/fileContent}}"
       filterTags: "^({{configuration.releasePrefix}})?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)(-(feat|feature)(([0-9a-zA-Z]*)(\\.([0-9]\\d*))?)?)$"
       gitCommit: "false"
       gitPush: "false"
@@ -100,8 +102,8 @@ releaseTypes:
       versionRangeFromBranchName: false
     hotfix:
       collapseVersions: true
-      collapsedVersionQualifier: ""
-      description: "Hotfix release "
+      collapsedVersionQualifier: "hotfix"
+      description: "{{#fileContent}}build/CHANGELOG.md{{/fileContent}}"
       filterTags: "^({{configuration.releasePrefix}})?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)(-(fix|hotfix)(([0-9a-zA-Z]*)(\\.([0-9]\\d*))?)?)$"
       gitCommit: "false"
       gitPush: "true"
