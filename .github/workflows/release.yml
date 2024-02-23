@@ -15,8 +15,9 @@ jobs:
       - name: 输出
         run: |
           echo "GITHUB_TOKEN:${{ secrets.GH_TOKEN }}"
+          echo "actor:${{ github.actor }}"
           git remote -v
-          git config --global user.name 'louruixiao'
+          git config --global user.name 'loufei'
           git config --global user.email '775674502@qq.com'
           git remote set-url origin https://${{github.actor}}:${{secrets.GH_TOKEN}}@github.com/${{github.repository}}.git
       - name: 发行版本
