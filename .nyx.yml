@@ -45,7 +45,7 @@ services:
     type: "GITHUB"
     options:
       AUTHENTICATION_TOKEN: "{{#environmentVariable}}GH_TOKEN{{/environmentVariable}}"
-      REPOSITORY_NAME: "learn-github"
+      REPOSITORY_NAME: "nyx-demo"
       REPOSITORY_OWNER: "louruixiao"
 releaseTypes:
   enabled:
