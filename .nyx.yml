@@ -61,7 +61,7 @@ releaseTypes:
   items:
     mainline:
       collapseVersions: false
-      filterTags: "^()?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)$"
+      filterTags: "^({{configuration.releasePrefix}})?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)$"
       gitCommit: "false"
       gitPush: "true"
       gitPushForce: "true"
@@ -77,7 +77,7 @@ releaseTypes:
       collapseVersions: true
       collapsedVersionQualifier: "alpha"
       description: "Integration release "
-      filterTags: "^()?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)(-(dev|develop|development|integration|latest)(\\.([0-9]\\d*))?)$"
+      filterTags: "^({{configuration.releasePrefix}})?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)(-(dev|develop|development|integration|latest)(\\.([0-9]\\d*))?)$"
       gitCommit: "false"
       gitPush: "true"
       gitTag: "true"
@@ -91,7 +91,7 @@ releaseTypes:
       collapseVersions: true
       collapsedVersionQualifier: ""
       description: "Feature release "
-      filterTags: "^()?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)(-(feat|feature)(([0-9a-zA-Z]*)(\\.([0-9]\\d*))?)?)$"
+      filterTags: "^({{configuration.releasePrefix}})?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)(-(feat|feature)(([0-9a-zA-Z]*)(\\.([0-9]\\d*))?)?)$"
       gitCommit: "false"
       gitPush: "false"
       gitTag: "false"
@@ -102,7 +102,7 @@ releaseTypes:
       collapseVersions: true
       collapsedVersionQualifier: ""
       description: "Hotfix release "
-      filterTags: "^()?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)(-(fix|hotfix)(([0-9a-zA-Z]*)(\\.([0-9]\\d*))?)?)$"
+      filterTags: "^({{configuration.releasePrefix}})?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)(-(fix|hotfix)(([0-9a-zA-Z]*)(\\.([0-9]\\d*))?)?)$"
       gitCommit: "false"
       gitPush: "true"
       gitTag: "true"
