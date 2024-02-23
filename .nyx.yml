@@ -16,7 +16,7 @@ changelog:
     "Added": "^feat$"
     "Fixed": "^fix$"
   substitutions:
-    "(?m)#([0-9]+)(?s)": "[#%s](https://example.com/issues/%s)"
+    "(?m)#([0-9]+)(?s)": "[#%s](https://github.com/louruixiao/nyx-demo/issues/%s)"
 commitMessageConventions:
   enabled:
     - conventionalCommits
