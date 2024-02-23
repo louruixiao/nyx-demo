@@ -23,17 +23,17 @@ commitMessageConventions:
     - conventionalCommitsForMerge
   items:
     conventionalCommits:
-      expression: "(?m)^(?<type>[a-zA-Z0-9_]+)(\((?<scope>[\u4e00-\u9fa5a-zA-Z ]+)\))?(!)?:( (?<title>.+))$(?s).*"
+      expression: "(?m)^(?<type>[a-zA-Z0-9_]+)(\\((?<scope>[\u4e00-\u9fa5a-zA-Z ]+)\\))?(!)?:( (?<title>.+))$(?s).*"
       bumpExpressions:
-        major: "(?s)(?m)^[a-zA-Z0-9_]+(!: .*|.*^(BREAKING( |-)CHANGE: )).*"
-        minor: "(?s)(?m)^feat(!{0})(\([\u4e00-\u9fa5a-zA-Z ]+\))?: (?!.*^(BREAKING( |-)CHANGE: )).*"
-        patch: "(?s)(?m)^fix(!{0})(\([\u4e00-\u9fa5a-zA-Z ]+\))?: (?!.*^(BREAKING( |-)CHANGE: )).*"
+        major: "(?s)(?m)^[a-zA-Z0-9_]+(\\([\u4e00-\u9fa5a-zA-Z ]+\\))?(!: .*|.*^(BREAKING( |-)CHANGE: )).*"
+        minor: "(?s)(?m)^feat(!{0})(\\([\u4e00-\u9fa5a-zA-Z ]+\\))?: (?!.*^(BREAKING( |-)CHANGE: )).*"
+        patch: "(?s)(?m)^fix(!{0})(\\([\u4e00-\u9fa5a-zA-Z ]+\\))?: (?!.*^(BREAKING( |-)CHANGE: )).*"
     conventionalCommitsForMerge:
-      expression: "(?m)(?<type>[a-zA-Z0-9_]+)(\((?<scope>[\u4e00-\u9fa5a-zA-Z ]+)\))?(!)?:( (?<title>.+))$(?s).*"
+      expression: "(?m)(?<type>[a-zA-Z0-9_]+)(\\((?<scope>[\u4e00-\u9fa5a-zA-Z ]+)\\))?(!)?:( (?<title>.+))$(?s).*"
       bumpExpressions:
-        major: "(?s)(?m)[a-zA-Z0-9_]+(!: .*|.*^(BREAKING( |-)CHANGE: )).*"
-        minor: "(?s)(?m)feat(!{0})(\([\u4e00-\u9fa5a-zA-Z ]+\))?: (?!.*^(BREAKING( |-)CHANGE: )).*"
-        patch: "(?s)(?m)fix(!{0})(\([\u4e00-\u9fa5a-zA-Z ]+\))?: (?!.*^(BREAKING( |-)CHANGE: )).*"
+        major: "(?s)(?m)[a-zA-Z0-9_]+(\\([\u4e00-\u9fa5a-zA-Z ]+\\))?(!: .*|.*^(BREAKING( |-)CHANGE: )).*"
+        minor: "(?s)(?m)feat(!{0})(\\([\u4e00-\u9fa5a-zA-Z ]+\\))?: (?!.*^(BREAKING( |-)CHANGE: )).*"
+        patch: "(?s)(?m)fix(!{0})(\\([\u4e00-\u9fa5a-zA-Z ]+\\))?: (?!.*^(BREAKING( |-)CHANGE: )).*"
 git:
   remotes:
     origin:
