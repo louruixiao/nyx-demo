@@ -13,12 +13,12 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - name: 输出
+      - name: 配置远程仓库
         run: |
-          git remote set-url origin https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git
+          git remote set-url origin https://${{github.actor}}:${{secrets.GH_TOKEN}}@github.com/${{github.repository}}.git
       - name: 发行版本
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           git remote -v
           ./gradlew nyxPublish --stacktrace
