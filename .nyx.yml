@@ -78,7 +78,7 @@ releaseTypes:
       collapseVersions: true
       collapsedVersionQualifier: "alpha"
       description: "{{#fileContent}}build/CHANGELOG.md{{/fileContent}}"
-      filterTags: "^({{configuration.releasePrefix}})?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)(-(dev|develop|development|integration|latest)(\\.([0-9]\\d*))?)$"
+      filterTags: "^({{configuration.releasePrefix}})?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)(-(alpha|develop|development|integration|latest)(\\.([0-9]\\d*))?)$"
       gitCommit: "false"
       gitPush: "true"
       gitTag: "true"
